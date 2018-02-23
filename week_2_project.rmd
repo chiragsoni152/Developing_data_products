@@ -1,0 +1,45 @@
+---
+title: "Developing Data Products Week 2"
+author: "Chirag Soni"
+output:
+  html_document: default
+  pdf_document:
+    citation_package: natbib
+  word_document: null
+---
+  
+## Executive Summary  
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+
+## Assignment
+
+```{r}
+
+library(leaflet)
+
+
+my_map <- leaflet() %>%
+addTiles()
+
+
+```   
+
+
+
+
+The above code snippet produces a map output, below code will be used to create a thumbnail for Taj Mahal, one of the World's wonders and a link to reach the official website
+
+
+
+# 23rd February 2018
+```{r}
+taj_mahal<-c("<a href='https://www.tajmahal.gov.in/tours.html'>Taj Mahal</a")
+leaflet() %>%
+     addTiles() %>%
+     addMarkers(lat=27.1750, lng=78.0422, popup=taj_mahal)
+
+```
